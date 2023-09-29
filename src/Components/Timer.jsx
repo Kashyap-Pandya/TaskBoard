@@ -18,9 +18,12 @@ const Timer = () => {
 		};
 	}, [isRunning]);
 
+	console.log(timer, "time");
+
 	const hours = Math.floor(timer / 3600000);
 	const minutes = Math.floor((timer % 3600000) / 60000);
 	const seconds = Math.floor((timer % 60000) / 1000);
+	const totalMinutes = Math.floor(timer / 60000);
 
 	return (
 		<div className='h-full mx-auto text-center'>
@@ -56,6 +59,9 @@ const Timer = () => {
 				>
 					Reset
 				</button>
+				<h2>
+					Total number of minutes spent on this task : {totalMinutes}M
+				</h2>
 			</div>
 		</div>
 	);
