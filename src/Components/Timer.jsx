@@ -1,12 +1,3 @@
-// import { useState } from "react";
-
-// const Timer = () => {
-// 	const [time, setTime] = useState("");
-// 	const [isItRunning, setIsItRunning] = useState(false);
-// 	return <div></div>;
-// };
-// export default Timer;
-
 import { useEffect, useState } from "react";
 
 const Timer = () => {
