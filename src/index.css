@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,700&family=Young+Serif&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+h1 {
+	font-family: "Young Serif", serif;
+}
+
+.dim-background {
+	opacity: 0.2;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
