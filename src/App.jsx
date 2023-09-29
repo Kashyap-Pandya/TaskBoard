@@ -2,7 +2,7 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import AddNewTask from "./Components/AddNewTask";
 import Header from "./Components/Header";
-import Title from "./Components/Section";
+import Title from "./Components/Title";
 import NewToDoBtn from "./Components/NewToDoBtn";
 import ToDo from "./Components/ToDo";
 
@@ -24,6 +24,10 @@ export default function App() {
 		setShowModel((prev) => !prev);
 	};
 
+	const deleteNote = (id) => {
+		const deletedNotes = todo.filter((todos) => todos.id !== id);
+		setTodo(deletedNotes);
+	};
 	return (
 		<main className='m-4'>
 			<div className={showModel ? "dim-background" : ""}>
@@ -43,7 +47,7 @@ export default function App() {
 					addToDo={() => addToDo(taskName, taskDes)}
 				/>
 			)}
-			<ToDo todos={todo} />
+			<ToDo todos={todo} deleteNote={deleteNote} />
 		</main>
 	);
 }
