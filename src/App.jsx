@@ -47,7 +47,17 @@ export default function App() {
 					addToDo={() => addToDo(taskName, taskDes)}
 				/>
 			)}
-			<ToDo todos={todo} deleteNote={deleteNote} />
+			<ToDo
+				todos={todo}
+				setTodo={setTodo}
+				deleteNote={deleteNote}
+				showModel={showModel}
+				setShowModel={setShowModel}
+				taskDes={taskDes}
+				setTaskDes={setTaskDes}
+				taskName={taskName}
+				setTaskName={setTaskName}
+			/>
 		</main>
 	);
 }
